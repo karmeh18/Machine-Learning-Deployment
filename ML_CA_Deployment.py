@@ -9,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 scaler=StandardScaler()
 norm=MinMaxScaler()
 st.title("Machine Learning Models")
-image = Image.open("C:\\Users\\Karan\\Desktop\\DBS Casual Assessments\\Machine Learning\\AI1.jpg")
+image = Image.open("C:\\Users\\Karan\\Desktop\\DBS Casual Assessments\\Machine Learning\\AI1.jpeg")
 st.image(image, caption='Artificial Intelligence')
 
 model_select=st.selectbox("Select any Machine Learning Models",["Bank Customers", "Brain Tumor", "Employee Attrition"])
