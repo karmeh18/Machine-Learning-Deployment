@@ -15,7 +15,7 @@ st.image(image, caption='Artificial Intelligence')
 model_select=st.selectbox("Select any Machine Learning Models",["Bank Customers", "Brain Tumor", "Employee Attrition"])
 if model_select=="Bank Customers":
     st.title("Bank Customer Attrition")
-    model=pickle.load(open('C:\\Users\\Karan\\Desktop\\Streamlit_Basics\\BankCustomerML.pkl','rb'))
+    model=pickle.load(open('BankModelML.sav','rb'))
     
     age=st.number_input('Provide your age',min_value=18,max_value=95,step=1)
     salary=st.number_input('Please provide your salary')
@@ -35,7 +35,7 @@ if model_select=="Bank Customers":
             st.header("Apologies!, The Bank may or will reject your application")
 elif model_select=="Brain Tumor":
     st.title("Brain Stroke")
-    model=pickle.load(open('C:\\Users\\Karan\\Desktop\\Streamlit_Basics\\Brain_stroke_ML.pkl','rb'))
+    model=pickle.load(open('BrainModelML.sav','rb'))
     
     agl=st.number_input('Provide your average glucose level',min_value=55.00,max_value=271.00,step=0.01)
     hyper=st.radio("Do you ave Hypertention now or before?",["Yes","No"])
@@ -65,7 +65,7 @@ elif model_select=="Brain Tumor":
             st.header("Please get yourself checked")
 else:
     st.title("Employee Attrition Model!")
-    model=pickle.load(open("C:\\Users\\Karan\\Desktop\\DBS Casual Assessments\\hr_model.pkl","rb"))
+    model=pickle.load(open("HRModelML.sav","rb"))
     
     satis=st.number_input("Please provide the satisfaction score of the employee 1-100",min_value=1,max_value=100)/100
     experience=st.number_input("Please specify the experience of the employee",min_value=1,max_value=10)
