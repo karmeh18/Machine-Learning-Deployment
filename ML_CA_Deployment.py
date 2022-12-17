@@ -11,7 +11,7 @@ norm=MinMaxScaler()
 st.title("Machine Learning Models")
 image = Image.open("AI1.jpg")
 st.image(image, caption='Artificial Intelligence')
-st.download_button(label="Download Karan Mehta Resume",data=PDFbyte,file_name="Karan Mehta Part time resume.pdf")
+
 
 model_select=st.selectbox("Select any Machine Learning Models",["Bank Customers", "Brain Tumor", "Employee Attrition"])
 if model_select=="Bank Customers":
